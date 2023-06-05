@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TexturePainter ( Place Me Out of Resources)/PaintTestExport.unity
+- path: Assets/AnotherColorPicker/Examples/scene4.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

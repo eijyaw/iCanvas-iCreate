@@ -1,0 +1,12 @@
+# Blender 3.4.1 MTL File: 'paintCanvasTest.blend'
+# www.blender.org
+
+newmtl Textured
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/Users/Teng Toinh/Downloads/mm_frame.png

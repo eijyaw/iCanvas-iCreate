@@ -27,9 +27,9 @@ public class PaintByNumberScript01 : MonoBehaviour
     public GameObject cameraRotatecontroller;
     private CameraControlTouch cTouch;
     public GameObject[] objArray;
-    public Sprite[] spritemaskList;
-    public GameObject SMContainer;
-    public SpriteMask spriteMaskPass;
+    //public Sprite[] spritemaskList;
+    public GameObject[] SMContainer;
+   // public SpriteMask spriteMaskPass;
     public GameObject CurrentObj;
     public bool ButtonSelect;
     public GameObject ColouredWheel;
@@ -60,8 +60,7 @@ public class PaintByNumberScript01 : MonoBehaviour
         }
         //TouchManager.Instance.PointersUpdated += UpdateBrushCursor;
         //TouchManager.Instance.PointersReleased += StopAction;
-        spriteMaskPass = SMContainer.GetComponent<SpriteMask>();
-        spriteMaskPass.enabled = false;
+      
         if(ButtonSelect == true)
         {
             pBNcolour = pBNcolourList[0];
@@ -78,18 +77,20 @@ public class PaintByNumberScript01 : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch t1 = Input.GetTouch(0);
-            pText.text = t1.position.ToString();
+           
           
                 DoAction(t1.position);
                
             if(t1.phase == UnityEngine.TouchPhase.Ended)
             {
+                pText.text = "TestDebug";
+                
                 for (int f = 0; f < objArray.Length; f++)
                 {
-                    SaveTexture();
                         objArray[f].GetComponent<MeshCollider>().enabled = true;
                     
                 }
+                SaveTexture();
             }
                 //for (int f = 0; f < objArray.Length; f++)
                 //{
@@ -127,7 +128,7 @@ public class PaintByNumberScript01 : MonoBehaviour
 
             if (mode == PainterByNumbers_BrushMode.PAINT)
             {
-                spriteMaskPass.enabled = true;
+        
                
                 brushObj = (GameObject)Instantiate(Resources.Load("TexturePainter-Instances/BrushEntity")); //Paint a brush
                 brushObj.GetComponent<SpriteRenderer>().color = pBNcolour; //Set the brush color
@@ -151,7 +152,7 @@ public class PaintByNumberScript01 : MonoBehaviour
             Invoke("SaveTexture", 0.1f);
 
         }
-        Debug.Log("Drawing");
+   
     }
     public void ChangeColour(int n)
     {
@@ -197,13 +198,15 @@ public class PaintByNumberScript01 : MonoBehaviour
         if (Physics.Raycast(cursorRay, out hit, 1000))
         {
             CurrentObj = hit.collider.gameObject;
+            
             //sMHolders[0] = CurrentObj;
 
             for (int m = 0; m < objArray.Length; m++)
             {
                 if (CurrentObj == objArray[m])
                 {
-                    spriteMaskPass.sprite = spritemaskList[m];
+                    SMContainer[m].GetComponent<SpriteMask>().enabled = true;
+                    pText.text = SMContainer[m].ToString();
                 }
                 
              }
@@ -218,10 +221,10 @@ public class PaintByNumberScript01 : MonoBehaviour
             uvWorldPosition.y = pixelUV.y - canvasCam.orthographicSize;//To center the UV on Y
      
 
-            if (hit.collider)
-            {
-                Debug.Log(hit.collider);
-            }
+            //if (hit.collider)
+            //{
+            //    Debug.Log(hit.collider);
+            //}
 
             for (int f = 0; f < objArray.Length; f++)
             {
@@ -251,7 +254,7 @@ public class PaintByNumberScript01 : MonoBehaviour
     //Sets the base material with a our canvas texture, then removes all our brushes
     void SaveTexture()
     {
-        Debug.Log("Saving");
+      
         brushCounter = 0;
         System.DateTime date = System.DateTime.Now;
         RenderTexture.active = canvasTexture;
@@ -263,6 +266,13 @@ public class PaintByNumberScript01 : MonoBehaviour
         foreach (Transform child in brushContainer.transform)
         {//Clear brushes
             Destroy(child.gameObject);
+        }
+        for (int m = 0; m < objArray.Length; m++)
+        {
+            
+                SMContainer[m].GetComponent<SpriteMask>().enabled = false;
+            
+
         }
         //StartCoroutine ("SaveTextureToFile"); //Do you want to save the texture? This is your method!
         Invoke("ShowCursor", 0.1f);

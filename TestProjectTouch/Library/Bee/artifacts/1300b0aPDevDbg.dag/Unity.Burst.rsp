@@ -300,7 +300,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VRModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.XRModule.dll"
--r:"C:/Users/Teng Toinh/TestProjectTouch/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.Unsafe.dll"
+-r:"C:/Users/Teng Toinh/Documents/GitHub/iCanvas-iCreate/TestProjectTouch/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.Unsafe.dll"
 -r:"Library/Bee/artifacts/1300b0aPDevDbg.dag/UnityEngine.UI.ref.dll"
 "Library/PackageCache/com.unity.burst@1.8.2/Runtime/BurstCompileAttribute.cs"
 "Library/PackageCache/com.unity.burst@1.8.2/Runtime/BurstCompiler.cs"

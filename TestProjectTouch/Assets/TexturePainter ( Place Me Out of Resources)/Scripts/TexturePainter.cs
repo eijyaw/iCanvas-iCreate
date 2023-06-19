@@ -121,6 +121,7 @@ public class TexturePainter : MonoBehaviour {
 		RenderTexture.active = null;
 		baseMaterial.mainTexture =tex;	//Put the painted texture as the base
 		foreach (Transform child in brushContainer.transform) {//Clear brushes
+			
 			Destroy(child.gameObject);
 		}
 		//StartCoroutine ("SaveTextureToFile"); //Do you want to save the texture? This is your method!

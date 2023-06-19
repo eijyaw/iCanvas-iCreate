@@ -1,4 +1,4 @@
-Using template 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
+Using template 'C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
 
 isGame application flag was added because:
 	Android TV Compatability was enabled
@@ -7,6 +7,9 @@ android.permission.INTERNET was added because:
 		Unity.InputSystem-FeaturesChecked.txt
 	System.Net.Sockets was present in:
 		OSCsharp-FeaturesChecked.txt
+		Photon3Unity3D-FeaturesChecked.txt
+		PhotonRealtime-FeaturesChecked.txt
+		websocket-sharp-FeaturesChecked.txt
 	UnityEngine.Network was present in:
 		Unity.InputSystem-FeaturesChecked.txt
 	Development player

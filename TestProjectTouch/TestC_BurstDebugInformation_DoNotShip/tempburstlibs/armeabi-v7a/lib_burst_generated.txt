@@ -6,7 +6,7 @@ Library: C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\T
 --meta-data-generation=False
 --dump=Function
 --float-precision=Standard
---compilation-defines=UNITY_2021_3_22
+--compilation-defines=UNITY_2021_3_26
 --compilation-defines=UNITY_2021_3
 --compilation-defines=UNITY_2021
 --compilation-defines=UNITY_5_3_OR_NEWER
@@ -117,6 +117,10 @@ Library: C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\T
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
 --compilation-defines=TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 --compilation-defines=UNITY_POST_PROCESSING_STACK_V2
+--compilation-defines=PHOTON_UNITY_NETWORKING
+--compilation-defines=PUN_2_0_OR_NEWER
+--compilation-defines=PUN_2_OR_NEWER
+--compilation-defines=PUN_2_19_OR_NEWER
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
 --compilation-defines=PACKAGE_TILEMAP
@@ -127,13 +131,6 @@ Library: C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\T
 --compilation-defines=ENABLE_VR_MODULE
 --compilation-defines=ENABLE_XR_MODULE
 --compilation-defines=ENABLE_INPUT_SYSTEM_PACKAGE
---compilation-defines=PACKAGE_INPUT_SYSTEM_EXISTS
---compilation-defines=PACKAGE_INPUT_SYSTEM_1_2_0_OR_NEWER_EXISTS
---compilation-defines=MODULE_AI_EXISTS
---compilation-defines=MODULE_ANIMATION_EXISTS
---compilation-defines=MODULE_PHYSICS_EXISTS
---compilation-defines=MODULE_PHYSICS_2D_EXISTS
---compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_VR
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_XR
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_PHYSICS
@@ -142,12 +139,20 @@ Library: C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\T
 --compilation-defines=ENABLE_BURST_1_0_0_OR_NEWER
 --compilation-defines=USING_ANIMATION_MODULE
 --compilation-defines=USING_PHYSICS2D_MODULE
+--compilation-defines=PACKAGE_INPUT_SYSTEM_EXISTS
+--compilation-defines=PACKAGE_INPUT_SYSTEM_1_2_0_OR_NEWER_EXISTS
+--compilation-defines=MODULE_AI_EXISTS
+--compilation-defines=MODULE_ANIMATION_EXISTS
+--compilation-defines=MODULE_PHYSICS_EXISTS
+--compilation-defines=MODULE_PHYSICS_2D_EXISTS
+--compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
 --compilation-defines=TIMELINE_FRAMEACCURATE
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\Temp\Burst
---debug=Full
+--debug=LineOnly
+--key-folder=C:/Program Files/Unity/Hub/Editor/2021.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\Library\Burst
 --output=C:\Users\Teng Toinh\Documents\GitHub\iCanvas-iCreate\TestProjectTouch\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
---pdb-search-paths=Temp/ManagedSymbols/
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
